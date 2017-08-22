@@ -1,13 +1,25 @@
 extends KinematicBody2D
 
 export var Speed = 100
+var BulletScene = preload("res://Prefabs/Bullet.tscn")
+var TimeBetwenShoots = 0.2
+var LastShot = 0
 
 func _ready():
 	set_process(true)
 	set_fixed_process(true)
 
 func _process(delta):
-	pass
+	if(LastShot > 0):
+		LastShot -= delta
+	if Input.is_action_pressed("ui_accept") and LastShot <= 0:
+		var bullet = BulletScene.instance()
+		
+		get_parent().add_child(bullet)
+		bullet.set_global_pos(get_node("Bullets").get_global_pos())
+		bullet.set_rot(get_rot())
+		bullet.force = Vector2(0,50).rotated(get_rot())
+		LastShot = TimeBetwenShoots
 	
 func _fixed_process(delta):
 	var motion = Vector2()

@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://Tiles/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Bullet.tscn" type="PackedScene" id=3]
 
-[node name="Node2D" type="Node2D"]
+[node name="World" type="Node2D"]
 
 [node name="Floor" type="TileMap" parent="."]
 
@@ -62,5 +63,9 @@ tile_data = IntArray( -65535, -1610612721, -65531, -1610612715, -65530, -1610612
 [node name="Player" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 256, 24 )
+
+[node name="Bullet" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 232, 40 )
 
 

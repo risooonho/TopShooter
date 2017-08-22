@@ -141,4 +141,8 @@ polygon = Vector2Array( -2, -6, 2, -6, 2, -5, 5, -5, 5, -4, 6, -4, 6, -1, 5, -1,
 shape_range = Vector2( 0, 11 )
 trigger = false
 
+[node name="Bullets" type="Position2D" parent="."]
+
+transform/pos = Vector2( -3.5, 8 )
+
 
