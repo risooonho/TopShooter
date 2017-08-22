@@ -309,14 +309,18 @@ shape = SubResource( 4 )
 trigger = false
 _update_shape_index = 0
 
-[node name="Balcao_1" type="Sprite" parent="."]
+[node name="Balcao_1" type="Sprite" parent="." groups=[
+"Small",
+]]
 
 transform/pos = Vector2( -64, -80 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 391, 187, 16, 16 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Balcao_1"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Balcao_1" groups=[
+"Small",
+]]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
@@ -329,11 +333,15 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Balcao_1/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balcao_1/StaticBody2D" groups=[
+"Small",
+]]
 
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
+
+[node name="isSmall" type="Node2D" parent="Balcao_1"]
 
 [node name="Balcao_1_curva" type="Sprite" parent="."]
 
@@ -355,7 +363,9 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Balcao_1_curva/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balcao_1_curva/StaticBody2D" groups=[
+"Small",
+]]
 
 shape = SubResource( 1 )
 trigger = false
@@ -381,7 +391,9 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Balcao_2/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balcao_2/StaticBody2D" groups=[
+"Small",
+]]
 
 shape = SubResource( 1 )
 trigger = false
@@ -407,7 +419,9 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Balcao_2_curva/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balcao_2_curva/StaticBody2D" groups=[
+"Small",
+]]
 
 shape = SubResource( 1 )
 trigger = false
@@ -433,7 +447,9 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Balcao_blocos1/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balcao_blocos1/StaticBody2D" groups=[
+"Small",
+]]
 
 shape = SubResource( 1 )
 trigger = false
@@ -459,7 +475,9 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Balcao_blocos2/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balcao_blocos2/StaticBody2D" groups=[
+"Small",
+]]
 
 shape = SubResource( 1 )
 trigger = false
@@ -485,7 +503,9 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Balcao_blocos3/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balcao_blocos3/StaticBody2D" groups=[
+"Small",
+]]
 
 shape = SubResource( 1 )
 trigger = false
@@ -511,7 +531,9 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Balcao_blocos4/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balcao_blocos4/StaticBody2D" groups=[
+"Small",
+]]
 
 shape = SubResource( 1 )
 trigger = false
@@ -563,7 +585,9 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Crate_pequena/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crate_pequena/StaticBody2D" groups=[
+"Small",
+]]
 
 shape = SubResource( 6 )
 trigger = false

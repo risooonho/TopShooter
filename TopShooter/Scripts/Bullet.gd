@@ -24,7 +24,9 @@ func _fixed_process(delta):
 		set_linear_velocity(get_linear_velocity() + force) # Set its velocity
 		force = force.linear_interpolate(Vector2(0, 0), delta*4)
 		for body in get_colliding_bodies(): # For each boddy we collide with
-			if(body.has_method("damage")):
-				body.damage(source,damage) # Damage it if possible
-			dangerous = false # No more danger!
-			queue_free()
+			print(body.get_child("isSmall"))
+			if(not body.is_in_group("Small")):
+				if(body.has_method("damage")):
+					body.damage(source,damage) # Damage it if possible
+				dangerous = false # No more danger!
+				queue_free()

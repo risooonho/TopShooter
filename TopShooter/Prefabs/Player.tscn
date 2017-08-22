@@ -106,7 +106,8 @@ collision/layers = 1
 collision/mask = 1
 collision/margin = 0.08
 script/script = ExtResource( 1 )
-Speed = 100
+WalkSpeed = 100
+TimeBetwenShoots = 0.2
 
 [node name="Sprite" type="Sprite" parent="."]
 

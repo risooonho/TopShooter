@@ -63,6 +63,8 @@ tile_data = IntArray( -65535, -1610612721, -65531, -1610612715, -65530, -1610612
 [node name="Player" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 256, 24 )
+WalkSpeed = 100
+TimeBetwenShoots = 0.2
 
 [node name="Bullet" parent="." instance=ExtResource( 3 )]
 
