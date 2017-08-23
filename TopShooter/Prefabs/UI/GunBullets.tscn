@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://Prefabs/UI/Theme.xml" type="Theme" id=1]
+[ext_resource path="res://UI/GunBullets.png" type="Texture" id=2]
+
+[node name="GunBullets" type="Control"]
+
+anchor/left = 1
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 10.0
+margin/top = 10.0
+margin/right = 10.0
+margin/bottom = 10.0
+
+[node name="TextureFrame" type="TextureFrame" parent="."]
+
+rect/scale = Vector2( 4, 4 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 1 )
+margin/left = -118.0
+margin/top = -46.0
+margin/right = -86.0
+margin/bottom = -32.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+theme/theme = ExtResource( 1 )
+margin/left = -110.0
+margin/top = -38.0
+margin/right = 2.0
+margin/bottom = 2.0
+text = "0/0"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+

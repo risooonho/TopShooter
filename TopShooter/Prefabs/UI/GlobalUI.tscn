@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://Scripts/GlobalUI.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/UI/GunBullets.tscn" type="PackedScene" id=2]
+
+[node name="GlobalUI" type="CanvasLayer"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+script/script = ExtResource( 1 )
+
+[node name="GunBullets" parent="." instance=ExtResource( 2 )]
+
+
