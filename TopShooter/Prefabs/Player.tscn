@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=1]
+[gd_scene load_steps=16 format=1]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/tilesheet_transparent.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/SoundPlayer.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -147,5 +148,7 @@ trigger = false
 [node name="Bullets" type="Position2D" parent="."]
 
 transform/pos = Vector2( -3.5, 8 )
+
+[node name="SoundPlayer" parent="." instance=ExtResource( 3 )]
 
 

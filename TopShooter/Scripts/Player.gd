@@ -3,6 +3,7 @@ extends KinematicBody2D
 ######################################################################################
 # Globals and vars
 var GlobalUI
+var SoundPlayer
 
 # Walking
 export var WalkSpeed = 100
@@ -26,6 +27,7 @@ func _ready():
 	GlobalUI.totalAmmo = totalAmmo
 	GlobalUI.currentAmmo = ammoPerPackage
 	CurrentBullets = ammoPerPackage
+	SoundPlayer = get_node("SoundPlayer")
 	
 	
 	
@@ -59,6 +61,7 @@ func Shoot():
 		bullet.set_rot(get_rot())
 		bullet.force = Vector2(0,50).rotated(get_rot())
 		LastShot = TimeBetwenShoots
+		SoundPlayer.play("hit1")
 	
 # Walking
 func Handle_Walk_Rotation_Event(delta):
