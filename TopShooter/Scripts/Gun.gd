@@ -67,14 +67,15 @@ func Handle_Shoot_Event(delta):
 	
 func Shoot():
 	if(CurrentBullets > 0):
+		var parentRot = get_parent().get_rot()
 		CurrentBullets -= 1
 		GlobalUI.currentAmmo = CurrentBullets
 		var bullet = BulletScene.instance()
 		
-		add_child(bullet)
+		get_parent().get_parent().add_child(bullet)
 		bullet.set_global_pos(BulletsNode.get_global_pos())
-		bullet.set_rot(get_rot())
-		bullet.force = Vector2(0,50).rotated(get_rot())
+		bullet.set_rot(parentRot)
+		bullet.force = Vector2(0,50).rotated(parentRot)
 		LastShot = TimeBetwenShoots
 		SoundPlayer.play("hit1")
 	else:
