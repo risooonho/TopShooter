@@ -4,7 +4,7 @@ var GlobalUI
 var SoundPlayer
 
 var isReloading = false
-var reloadInterval = 0.2
+export var reloadInterval = 0.2
 var timePast = 0
 
 export var totalAmmo = 128

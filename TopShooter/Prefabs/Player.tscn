@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/tilesheet_transparent.png" type="Texture" id=2]
-[ext_resource path="res://Prefabs/Gun.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/MiniGun.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -118,8 +118,8 @@ polygon = Vector2Array( -2, -5, 2, -5, 2, -4, 5, -4, 5, -3, 6, -3, 6, 0, 5, 0, 5
 shape_range = Vector2( 0, 8 )
 trigger = false
 
-[node name="Gun" parent="." instance=ExtResource( 3 )]
+[node name="MiniGun" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( -4, 4.5 )
+transform/pos = Vector2( -4, 5 )
 
 
