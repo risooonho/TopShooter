@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://Tiles/tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Prefabs/UI/GlobalUI.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Prefabs/Multiplayer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/UI/GlobalUI.tscn" type="PackedScene" id=2]
 
 [node name="World" type="Node2D"]
 
@@ -61,27 +59,6 @@ collision/mask = 1
 occluder/light_mask = 1
 tile_data = IntArray( -131041, 22, -65535, -1610612721, -65531, -1610612715, -65530, -1610612715, -65529, -1610612715, 1, -1610612721, 7, -1610612715, 65537, -1610612721, 65543, -1610612714, 65559, 1610612750, 65560, 1610612749, 65561, 1610612749, 65562, 1610612754, 65563, 1610612749, 65564, -1073741810, 131073, -1610612721, 131079, -1610612714, 131095, -1610612723, 131100, -1073741811, 196609, -1610612721, 196631, -1610612716, 262145, -1610612721, 262167, -1610612716, 327681, -1610612721, 327703, -1610612723, 327708, -1073741811, 393217, -1610612721, 393223, -1610612714, 393239, -1610612722, 393240, 19, 393241, 13, 393242, 13, 393243, 17, 393244, 14, 458753, -1610612721, 458759, -1610612715, 524289, -1610612721, 524294, -1610612715, 524295, -1610612715, 524319, 22, 589853, 22, 589854, 22, 589855, 22 )
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 256, 24 )
-mode = 3
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-
-[node name="GlobalUI" parent="." instance=ExtResource( 3 )]
-
-[node name="Multiplayer" parent="." instance=ExtResource( 4 )]
+[node name="GlobalUI" parent="." instance=ExtResource( 2 )]
 
 

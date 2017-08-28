@@ -12,7 +12,6 @@ export var WalkSpeed = 100
 # Main functions
 
 func _ready():
-	var host = NetworkedMultiplayerENet.new()
 	
 	set_process(true)
 	set_fixed_process(true)
