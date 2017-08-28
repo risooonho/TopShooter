@@ -64,6 +64,21 @@ tile_data = IntArray( -131041, 22, -65535, -1610612721, -65531, -1610612715, -65
 [node name="Player" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 256, 24 )
+mode = 3
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
 
 [node name="GlobalUI" parent="." instance=ExtResource( 3 )]
 
