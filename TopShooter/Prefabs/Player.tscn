@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=1]
 
-[ext_resource path="res://player.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/tilesheet_transparent.png" type="Texture" id=2]
 [ext_resource path="res://Prefabs/Gun.tscn" type="PackedScene" id=3]
 

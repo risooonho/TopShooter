@@ -37,11 +37,14 @@ func _ready():
 	CurrentBullets = ammoPerPackage
 	SoundPlayer = get_node("SoundPlayer")
 	
+	print(get_parent().is_network_master())
+	print(is_network_master())
+	
 	
 	set_process(true)
 
 func _process(delta):
-	if (is_network_master()):
+	if (get_parent().is_network_master()):
 		Handle_Shoot_Event(delta)
 	
 ######################################################################################
