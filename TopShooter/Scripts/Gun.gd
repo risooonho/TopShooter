@@ -16,10 +16,22 @@ var LastShot = 0
 var BulletsNode
 var CurrentBullets = 0
 
+func get_random_number():
+    randomize()
+    return randi()%11
+
+sync func setup_bullet(pos, rot, by_who):
+	var bullet = BulletScene.instance()
+	bullet.set_name("Bullet-" + str(get_random_number()))
+	bullet.owner = by_who
+	bullet.set_global_pos(pos)
+	bullet.set_rot(rot)
+	bullet.force = Vector2(0,50).rotated(rot)
+	get_parent().get_parent().add_child(bullet)
 
 func _ready():
 	BulletsNode = get_node("Bullets")
-	GlobalUI = get_node("/root/World/GlobalUI")
+	GlobalUI = get_node("/root/world/GlobalUI")
 	GlobalUI.totalAmmo = totalAmmo
 	GlobalUI.currentAmmo = ammoPerPackage
 	CurrentBullets = ammoPerPackage
@@ -29,7 +41,8 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	Handle_Shoot_Event(delta)
+	if (is_network_master()):
+		Handle_Shoot_Event(delta)
 	
 ######################################################################################
 # Handlers down here
@@ -70,12 +83,10 @@ func Shoot():
 		var parentRot = get_parent().get_rot()
 		CurrentBullets -= 1
 		GlobalUI.currentAmmo = CurrentBullets
-		var bullet = BulletScene.instance()
-		
-		get_parent().get_parent().add_child(bullet)
-		bullet.set_global_pos(BulletsNode.get_global_pos())
-		bullet.set_rot(parentRot)
-		bullet.force = Vector2(0,50).rotated(parentRot)
+
+		rpc("setup_bullet", BulletsNode.get_global_pos(), parentRot, get_tree().get_network_unique_id())
+
+
 		LastShot = TimeBetwenShoots
 		SoundPlayer.play("hit1")
 	else:

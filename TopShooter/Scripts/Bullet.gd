@@ -1,6 +1,7 @@
 # bullet.gd -> RigidBody2D
 extends RigidBody2D
 
+var owner
 var force = Vector2(0,0) # The force of movement
 var source # The shooter of the bullet
 var die_on_timeout = true # Should the bullet be removed when there is no time left?
@@ -21,6 +22,7 @@ func _fixed_process(delta):
 		queue_free()
 	
 	if(dangerous):
+		#TODO: make some teams here
 		set_linear_velocity(get_linear_velocity() + force) # Set its velocity
 		force = force.linear_interpolate(Vector2(0, 0), delta*4)
 		for body in get_colliding_bodies(): # For each boddy we collide with
